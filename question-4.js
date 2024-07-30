@@ -1,5 +1,14 @@
 function sortProductsByPrice(products) {
   // Your code here
+  for (let i = 0; i < products.length; i++) {
+    for (let j = i + 1; j < products.length; j++) {
+      console.log(products[i], products[j]);
+      if (products[i]["price"] > products[j]["price"]) {
+        [products[i], products[j]] = [products[j], products[i]];
+      }
+    }
+  }
+  return products;
 }
 
 // Test case
